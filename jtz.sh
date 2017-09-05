@@ -19,8 +19,8 @@ CheckTimeZone()
     do
         echo -e "Path Java: $x"
         echo -e "Version TZ:"
-        $x -jar tzupdater.jar -V | grep "JRE tzdata"
-        $x -jar tzupdater.jar -V | grep "JRE tzdata" > /dev/null 2>&1
+        $x -jar java/tzupdater.jar -V | grep "JRE tzdata"
+        $x -jar java/tzupdater.jar -V | grep "JRE tzdata" > /dev/null 2>&1
         $x $JavaClass $DAYS
         echo -e "\n"
     done < $JREList 
@@ -33,11 +33,11 @@ FixTimeZone()
     do
         echo -e "Path Java: $x"
         echo -e "Version TZ Previous:"
-        $x -jar tzupdater.jar -V | grep "JRE tzdata"
+        $x -jar java/tzupdater.jar -V | grep "JRE tzdata"
         echo -e "\n"
-        $x -jar tzupdater.jar -l $FIX
+        $x -jar java/tzupdater.jar -l $FIX
         echo -e "\nVersion TZ Current:"
-        $x -jar tzupdater.jar -V | grep "JRE tzdata"
+        $x -jar java/tzupdater.jar -V | grep "JRE tzdata"
         $x $JavaClass $DAYS
         echo -e "\n"
     done < $JREList

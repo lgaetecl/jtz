@@ -1,7 +1,7 @@
 #!/bin/bash
 
 JREList=/tmp/JREList.txt
-JavaClass=java/PrintDate
+JavaClass=PrintDate
 FIX=http://www.iana.org/time-zones/repository/tzdata-latest.tar.gz
 
 findJRE()
@@ -20,7 +20,6 @@ CheckTimeZone()
         echo -e "Path Java: $x"
         echo -e "Version TZ:"
         $x -jar java/tzupdater.jar -V | grep "JRE tzdata"
-        $x -jar java/tzupdater.jar -V | grep "JRE tzdata" > /dev/null 2>&1
         $x $JavaClass $DAYS
         echo -e "\n"
     done < $JREList 

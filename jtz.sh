@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 JREList=/tmp/JREList.txt
 JavaClass=java/PrintDate

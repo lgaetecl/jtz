@@ -8,12 +8,12 @@ Download tzupdater from oracle page http://www.oracle.com/technetwork/java/javas
 
 Syntax: 
 
-       sh CheckJTZ.sh -c check -dir FOLDER -day NUMBER
-       sh CheckJTZ.sh -c update -dir FOLDER -day NUMBER
+       sh jtz.sh -c check -dir FOLDER -day NUMBER
+       sh jtz.sh -c update -dir FOLDER -day NUMBER
 
 Example Command: 
 
-       sh CheckJTZ.sh -c check -dir /usr/openv/ -day 10
+       sh jtz.sh -c check -dir /usr/openv/ -day 10
 
 Example Output:
 
@@ -29,7 +29,7 @@ Example Output:
 
 Example Command: 
 
-       sh CheckJTZ.sh -c update -dir /usr/openv/ -day 10
+       sh jtz.sh -c update -dir /usr/openv/ -day 10
 
 Example Output:
 

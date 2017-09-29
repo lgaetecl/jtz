@@ -81,6 +81,11 @@ else
     findJRE $DIR
 fi
 
+if [ -z $DIR]
+then
+    CheckTimeZone
+fi
+
 if [ $COMMAND == "check" ]
 then
     CheckTimeZone
